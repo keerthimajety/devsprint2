@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warehouse_Capacity</fullName>
+    <active>true</active>
+    <description>Ware house capacity should be minimum 5000 SFT</description>
+    <errorConditionFormula>Warehouse_Capacity__c &lt;=5000</errorConditionFormula>
+    <errorDisplayField>Warehouse_Capacity__c</errorDisplayField>
+    <errorMessage>Ware house capacity should be minimum 5000 SFT</errorMessage>
+</ValidationRule>

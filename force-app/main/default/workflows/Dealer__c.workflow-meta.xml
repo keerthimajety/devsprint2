@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Acknowledgement_Email_Alert</fullName>
+        <description>Acknowledgement Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Acknowledgement_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_for_the_physical_verification_team_new_dealer_application_assigned</fullName>
+        <description>Alert for the physical verification team new dealer application assigned</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Physical_verification_team</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_process/Email_to_queuemembers</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_for_the_physical_verification_team_that_new_dealer_application_assigned</fullName>
+        <description>Alert for the physical verification team that new dealer application assigned</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Physical_verification_team</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_process/Email_to_queuemembers</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Rejection</fullName>
+        <description>Email Rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_process/Dealer_email</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_to_dealer_on_rejection</fullName>
+        <description>Send email to dealer on rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_process/Dealer_email</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_to_the_dealer_informing_the_application_rejection</fullName>
+        <description>Send email to the dealer ,informing the application rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Physical_verification_team</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Approval_process/Dealer_email</template>
+    </alerts>
+    <alerts>
+        <fullName>Test_Email_alert</fullName>
+        <description>Test Email alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SchedulerUnauthenticatedUserAppointmentTypeEmailTemplateForAmazonChime</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Update_status_field_to_awaiting</fullName>
+        <description>Update status field to awaiting</description>
+        <field>Status__c</field>
+        <literalValue>Awaiting</literalValue>
+        <name>Update status field to awaiting</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>change_owner</fullName>
+        <description>whent he dealer approves the ownership changes to the verification team queue</description>
+        <field>OwnerId</field>
+        <lookupValue>Physical_verificationt_team</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>change owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>change_owner_to_queue</fullName>
+        <description>change the owner field to physical vefirication team once the dealer manager approves</description>
+        <field>OwnerId</field>
+        <lookupValue>Physical_verificationt_team</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>change owner to queue</name>
+        <notifyAssignee>true</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>status rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_update</fullName>
+        <description>status is updated  to approved by manager</description>
+        <field>Status__c</field>
+        <literalValue>Approved by Manager</literalValue>
+        <name>status update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_update_Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved by Manager</literalValue>
+        <name>status update Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_update_Rejected</fullName>
+        <description>status  is changed to Rejected</description>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>status update Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_status_field</fullName>
+        <description>once manager approved, the status of  the dealer object changes to approved</description>
+        <field>Status__c</field>
+        <literalValue>Approved by Manager</literalValue>
+        <name>update status field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_status_field_on_rejection</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>update status field on rejection</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

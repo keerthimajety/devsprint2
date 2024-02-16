@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Employees</fullName>
+    <active>true</active>
+    <description>Employees count should be minimum 5</description>
+    <errorConditionFormula>NOT(No_of_Employees__c &gt;= 5)</errorConditionFormula>
+    <errorDisplayField>No_of_Employees__c</errorDisplayField>
+    <errorMessage>Employees count should be minimum 5</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Name_alphabet_Only</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX( Last_Name__c ,&quot;^[a-z A-Z]*$&quot;))</errorConditionFormula>
+    <errorDisplayField>Last_Name__c</errorDisplayField>
+    <errorMessage>Last Name should be alphabet only</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Establishment_validation</fullName>
+    <active>true</active>
+    <description>Organization establishment should be minimum 1 years old</description>
+    <errorConditionFormula>NOT(YEAR(TODAY())  -  YEAR( Year_of_Establishment__c ) &gt;1)</errorConditionFormula>
+    <errorDisplayField>Year_of_Establishment__c</errorDisplayField>
+    <errorMessage>Organization establishment should be minimum 1 years old</errorMessage>
+</ValidationRule>

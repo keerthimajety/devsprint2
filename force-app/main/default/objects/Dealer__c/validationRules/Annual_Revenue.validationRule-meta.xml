@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_Revenue</fullName>
+    <active>true</active>
+    <description>Annual Revenue should be minimum 5000</description>
+    <errorConditionFormula>NOT(Annual_Revenue__c &gt;=5000)</errorConditionFormula>
+    <errorDisplayField>Annual_Revenue__c</errorDisplayField>
+    <errorMessage>Annual Revenue should be minimum 5000</errorMessage>
+</ValidationRule>

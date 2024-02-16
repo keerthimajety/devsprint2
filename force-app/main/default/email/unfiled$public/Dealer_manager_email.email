@@ -1,0 +1,11 @@
+Dear sir,
+
+New dealer  application awaitng for approval.Please approve/reject
+
+Dealer Name:{!Dealer__c.Name}
+Dealer Company :{!Dealer__c.Company__c}
+Dealer Name :{!Dealer__c.OwnerFirstName}
+
+
+
+Thank you,

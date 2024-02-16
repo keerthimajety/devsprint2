@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Verification Team</name>
+    <queueMembers>
+        <roles>
+            <role>physical_verification_team</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Dealer__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>
